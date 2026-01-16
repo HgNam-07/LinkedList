@@ -3,14 +3,13 @@
 class LinkedList
 {
     private:
-        struct Node
+        typedef struct Node
         {
             int data;
             Node *next;
             Node(int data = 0): data(data), next(nullptr){}
             ~Node(){data = 0; next = nullptr;}
-        };
-        typedef Node *LinkedNode;
+        } *LinkedNode;
         LinkedNode createNode(int data) {return new Node(data);}
         LinkedNode head, tail;
         int initFirstNode(LinkedNode);
